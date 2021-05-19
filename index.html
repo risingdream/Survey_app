@@ -5,16 +5,49 @@
         <title>The example shows how to go to the next page automatically, jQuery Survey Library Example</title><meta name="viewport" content="width=device-width"/>
         <script src="https://unpkg.com/jquery"></script>
         <script src="https://unpkg.com/survey-jquery@1.8.47/survey.jquery.min.js"></script>
+
         <link href="https://unpkg.com/survey-knockout@1.8.47/modern.css" type="text/css" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">        
+
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="https://unpkg.com/moment@2.24.0/moment.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" type="text/css" rel="stylesheet"/>
+        
+        <script src="https://unpkg.com/surveyjs-widgets@1.8.47/surveyjs-widgets.js"></script>
+        <link href="https://unpkg.com/survey-knockout@1.8.47/survey.min.css" type="text/css" rel="stylesheet"/>
         <style>
             body div span { font-family: 'Noto Sans KR', sans-serif !important; }
         </style>
     </head>
     <body>
+        <!-- Modal -->
+        <div id="questionDescriptionPopup" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- An element that displays a survey element's 'popupdescription' property value-->
+                        <p>
+                            <div id="questionDescriptionText"></div>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="surveyElement" style="display:inline-block;width:100%;"></div>
         <div id="surveyResult" style="text-align: center;"></div>
-        <script type="text/javascript" src="./index.js"></script>
+        <script type="text/javascript" src="./tax_calc.js"></script>
     </body>
 </html>
